@@ -1,0 +1,44 @@
+/* A shared quiet entrance and hover rhythm across the existing layout. */
+.hero-reveal-title, .hero-reveal-english { display: block; white-space: nowrap; }
+.hero-reveal-english { color: #e0e7ed; }
+.hero-typography[data-running=true] .hero-reveal-english { animation: english-reveal 650ms 180ms cubic-bezier(.22,1,.36,1) both; }
+@keyframes english-reveal { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+.editorial-spotlight.spotlight-card { background: var(--panel); box-shadow: none; border-radius: 16px; padding: 32px; }
+.editorial-spotlight .spotlight-card__border { background: color-mix(in srgb, var(--text) 7%, transparent); }
+.soft-link, .project-directory a, .tag-cloud a, .project-page-pagination a, .search-result {
+  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+.soft-link svg { transition: transform 280ms cubic-bezier(.22,1,.36,1); }
+.soft-link:hover svg { transform: translateX(3px); }
+.project-page-figure { overflow: hidden; }
+.project-page-figure img { transition: filter 400ms ease; }
+@media (hover:hover) and (pointer:fine) { .project-page-figure:hover img { filter: brightness(1.06); } }
+@media (max-width:767px) { .editorial-spotlight.spotlight-card { padding: 24px; } }
+@media (prefers-reduced-motion:reduce) {
+  .hero-typography[data-running=true] .hero-reveal-english { animation: none; }
+  .editorial-spotlight .spotlight-card__light, .editorial-spotlight .spotlight-card__edge { display: none; }
+  .soft-link:hover svg { transform: none; }
+}
+
+/* Reserve the phrase width without drawing empty mechanical tiles. */
+.rotating-motto .split-flap-text__tile[data-empty=true] { background: transparent; box-shadow: none; }
+.rotating-motto .split-flap-text__tile[data-empty=true]::before,
+.rotating-motto .split-flap-text__tile[data-empty=true]::after,
+.rotating-motto .split-flap-text__tile[data-empty=true] .split-flap-text__half { opacity: 0; }
+.rotating-motto .split-flap-text__tile::before { opacity: .28; }
+.rotating-motto .split-flap-text__tile::after { opacity: .4; }
+
+/* Keep the title clear and bring the first content card into the opening view. */
+.center-pages-shell .site-banner { height: clamp(480px, 60svh, 700px); min-height: 0; max-height: none; }
+.center-pages-shell .site-banner::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 48% 52% at 50% 44%, #0007, transparent 100%), linear-gradient(transparent 65%, #0006); }
+.center-pages-shell .banner-copy { padding: 76px 24px 56px; }
+.banner-copy .hero-reveal-english { color: #b9cbd2; font-size: clamp(11px,1.15vw,16px); letter-spacing: .2em; margin-top: 8px; }
+.hero-action:first-child .sling-button__pad { box-shadow: 0 0 0 1px #a4dce83b; }
+.site-nav .nav-dropdown-trigger:focus-visible, .soft-link:focus-visible, .project-directory a:focus-visible { outline: 2px solid #a4dce8; outline-offset: 3px; }
+@media (max-width:767px) {
+  .center-pages-shell .site-banner { height: clamp(420px, 56svh, 480px); }
+  .center-pages-shell .banner-copy { padding: 70px 20px 48px; }
+  .banner-copy .hero-reveal-english { font-size: 11px; letter-spacing: .12em; }
+  .hero-actions { margin-top: 25px; gap: 30px; }
+  .hero-action-label { font-size: 11px; letter-spacing: .5px; }
+}

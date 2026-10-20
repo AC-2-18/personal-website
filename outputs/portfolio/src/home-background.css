@@ -1,0 +1,11 @@
+.home-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #000;
+}
+:root[data-wallpaper=pattern] { --page: #000; }
+:root[data-wallpaper=pattern] .site-banner { background: transparent; }
+:root[data-wallpaper=pattern] .banner-copy { text-shadow: 0 2px 18px #000, 0 1px 4px #000; }
+:root[data-wallpaper=pattern] .site-footer { background: #000c; border-radius: 16px 16px 0 0; }

@@ -1,0 +1,35 @@
+.profile-page h1 { font-size: clamp(25px,2.3vw,36px); line-height: 1.5; font-weight: 500; overflow-wrap: anywhere; }
+.profile-page h2 { font-size: 20px; line-height: 1.5; margin-bottom: 16px; }
+.profile-page-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.profile-lead { margin-top: 20px; color: var(--muted); line-height: 2; }
+.profile-direction { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.profile-direction span { padding: 4px 10px; border: 1px solid var(--line); border-radius: 7px; font-size: 11px; color: var(--muted); }
+.profile-section,.private-facts { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
+.profile-section > p,.profile-section li { color: var(--muted); line-height: 2; }
+.profile-section ul { padding-left: 20px; }
+.profile-strengths { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: 24px; }
+.profile-strengths h3 { font-size: 14px; margin-bottom: 8px; }
+.profile-strengths p { font-size: 12px; color: var(--muted); line-height: 1.9; }
+.contact-details { margin-top: 22px; min-width: 0; }
+.contact-row { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 5px 12px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.contact-channel { grid-column: 1/-1; font-size: 9px; letter-spacing: 1.5px; color: var(--muted); }
+.contact-row a { color: var(--text); overflow-wrap: anywhere; font-size: 14px; }
+.contact-row button { color: var(--accent); font-size: 11px; padding: 6px; }
+.github-link { display: flex; justify-content: space-between; gap: 16px; margin-top: 22px; color: var(--accent); font-size: 13px; }
+.private-facts dl { margin: 0; }
+.private-facts dl > div { display: grid; grid-template-columns: 100px minmax(0,1fr); padding: 13px 0; gap: 16px; border-bottom: 1px solid var(--line); }
+.private-facts dt { color: var(--muted); font-size: 12px; }
+.private-facts dd { margin: 0; overflow-wrap: anywhere; }
+.private-facts a,.privacy-lock { color: var(--accent); }
+.privacy-lock { font-size: 12px; }
+.private-gate { min-height: 370px; }
+.private-gate form { margin-top: 30px; }
+.privacy-message { min-height: 24px; margin-top: 20px; font-size: 12px; color: var(--muted); }
+.private-gate button:disabled { opacity: .5; cursor: not-allowed; }
+.profile-page .code-slots__input { width: 100%; min-width: 0; }
+.profile-page .code-slots__check svg { width: 22px; height: 22px; }
+@media(max-width:600px) {
+  .profile-strengths { grid-template-columns: 1fr; gap: 20px; }
+  .private-facts dl > div { grid-template-columns: 72px minmax(0,1fr); gap: 10px; }
+  .contact-row a { font-size: 12px; }
+}

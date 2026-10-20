@@ -1,0 +1,6 @@
+.hero-actions { display: flex; align-items: start; justify-content: center; gap: 32px; margin-top: 28px; }
+.hero-action { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.hero-action-label { font-size: 11px; color: #c5d8df; letter-spacing: 1px; pointer-events: none; }
+.hero-actions .sling-button__icon svg { width: 18px; height: 18px; }
+.hero-actions .sling-button__fx { width: var(--sl-svg); height: var(--sl-svg); }
+.hero-actions .sling-button__pad:focus-visible { outline: 2px solid #a4dce8; outline-offset: 5px; }

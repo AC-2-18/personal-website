@@ -1,0 +1,13 @@
+.hero-typography { width: 100%; }
+.hero-glitch-en::before,.hero-glitch-en::after { animation-delay: 1.6s; }
+.hero-typography[data-active=false] .glitch::before,.hero-typography[data-active=false] .glitch::after { animation-play-state: paused; opacity: 0; }
+.banner-copy .hero-glitch-cn { font-size: clamp(24px,4.1vw,58px); line-height: 1.5; letter-spacing: .06em; font-weight: 400; }
+.banner-copy .hero-glitch-en { font-size: clamp(11px,1.3vw,18px); line-height: 1.7; letter-spacing: .22em; font-weight: 400; margin-top: 6px; }
+.banner-copy .rotating-motto { margin: 24px auto 0; max-width: 100%; min-height: 26px; letter-spacing: 0; line-height: 1; }
+.rotating-motto .split-flap-text { font-family: inherit; letter-spacing: 0; font-weight: 400; max-width: 100%; }
+.rotating-motto .split-flap-text__tile { width: 1.1em; height: 1.45em; flex-shrink: 0; }
+@media(max-width:767px) {
+  .banner-copy .hero-glitch-cn { letter-spacing: 0; font-size: clamp(24px,5.9vw,38px); }
+  .banner-copy .hero-glitch-en { letter-spacing: .12em; }
+  .banner-copy .rotating-motto { margin-top: 20px; }
+}

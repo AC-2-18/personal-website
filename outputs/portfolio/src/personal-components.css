@@ -1,0 +1,30 @@
+.site-header.plain-header { background: #151e23f2; color: #edf6f8; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.header-wave-background { position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; }
+.header-wave-placeholder { display: block; width: 100%; height: 100%; background: radial-gradient(circle, #7c3aed60 2px, transparent 2.4px) center / 10px 10px #120f17; }
+.header-wave-background .shape-waves__fallback { inset: 0; transform: none; background: radial-gradient(circle, #7c3aed60 2px, transparent 2.4px) center / 10px 10px; }
+.site-header .brand { min-width: 150px; font-size: 27px; font-weight: 750; letter-spacing: 1px; color: #edf6f8; }
+.site-header .particle-brand { width: 164px; height: 62px; }
+.particle-brand .particle-text { min-height: 0; height: 100%; touch-action: pan-y; }
+.particle-brand>span { padding-left: 15px; }
+.site-header .nav-search { color: #c9dce3; background: #0d171dc9; border: 1px solid #a4dce826; }
+.site-header .nav-search input { color: #edf6f8; }
+.site-header .nav-search input::placeholder { color: #9eb5bf; }
+.personal-photo-card { min-width: 0; }
+.personal-photo-card .holo-profile-card { width: 100%; }
+.personal-photo-card .holo-profile-card__body { padding: 0; gap: 0; border-radius: var(--pc-radius); background: transparent; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.personal-photo-card .holo-profile-card__rim { display: none; }
+.personal-photo-card .holo-profile-card__photo { inset: 0; width: 100%; height: calc(100% - 40px); padding: 8px 3px 0; object-fit: contain; object-position: center; animation: expression-in .32s ease-out both; }
+.personal-photo-card .holo-profile-card__info { left: 18px; right: 18px; bottom: 18px; }
+.personal-photo-card .holo-profile-card__name { font-size: 23px; letter-spacing: 3px; }
+.holo-profile-card__photo-switch { position: absolute; inset: 0; z-index: 5; width: 100%; height: 100%; border-radius: inherit; cursor: pointer; text-align: right; }
+.holo-profile-card__photo-switch:focus-visible { outline: 3px solid #58ccea; outline-offset: -4px; }
+@keyframes expression-in { from { opacity: .15; filter: blur(2px); } to { opacity: 1; filter: blur(0); } }
+@media (max-width: 767px) {
+  .site-header .brand { min-width: 0; font-size: 23px; }
+  .site-header .particle-brand { width: 140px; height: 56px; }
+  .site-header .nav-search:focus-within { right: 54px; background: #0d171d; }
+  .personal-photo-card { max-width: 360px; width: 100%; margin-inline: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .personal-photo-card .holo-profile-card__photo { animation: none; }
+}

@@ -1,0 +1,14 @@
+.glitch { display: block; color: #fff; position: relative; white-space: nowrap; }
+.glitch::before,.glitch::after { content: attr(data-text); position: absolute; inset: 0; color: #fff; overflow: hidden; pointer-events: none; background: transparent; opacity: 0; }
+.glitch::after { left: 1px; text-shadow: var(--after-shadow); animation: animate-glitch var(--after-duration,6s) infinite steps(1,end); }
+.glitch::before { left: -1px; text-shadow: var(--before-shadow); animation: animate-glitch var(--before-duration,6s) infinite steps(1,end) reverse; }
+.glitch.enable-on-hover:not(:hover)::before,.glitch.enable-on-hover:not(:hover)::after { opacity: 0; animation: none; }
+/* Keep the title still for most of each cycle; brief slices remain a detail. */
+@keyframes animate-glitch {
+  0%, 94%, 100% { opacity: 0; clip-path: inset(50% 0 50% 0); }
+  95% { opacity: .55; clip-path: inset(22% 0 64% 0); }
+  96% { opacity: .35; clip-path: inset(61% 0 25% 0); }
+  97% { opacity: .5; clip-path: inset(38% 0 51% 0); }
+  98% { opacity: 0; clip-path: inset(50% 0 50% 0); }
+}
+@media(prefers-reduced-motion:reduce) { .glitch::before,.glitch::after { display: none; animation: none; } }

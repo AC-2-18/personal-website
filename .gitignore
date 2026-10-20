@@ -1,0 +1,14 @@
+/work/
+/素材/
+/outputs/*
+!/outputs/portfolio/
+**/node_modules/
+**/dist/
+.env
+.env.*
+!.env.example
+*.log
+*.pem
+*.key
+.DS_Store
+Thumbs.db
