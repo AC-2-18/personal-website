@@ -4,7 +4,9 @@ React + Vite 个人网站。2026-10-20 按用户纠正恢复到静态改版之�
 
 ## 运行与构建
 
-在本目录执行 `npm ci` 安装依赖，`npm run dev` 启动本地预览；`npm run build` 生成 dist，`npm run preview` 检查构建。使用相对资源路径，支持根目录和 /portfolio/ 子目录。当前未部署公网。
+在本目录执行 `npm ci` 安装依赖，`npm run dev` 启动本地预览；`npm run build` 生成 dist，`npm run preview` 检查构建。本地默认 base 为 `/`；GitHub Pages 工作流根据站点配置自动注入 base，支持仓库子路径、用户主页和自定义域名根路径。本次仅准备发布配置，未执行部署。
+
+免费上线的最少步骤、子路径预览和故障排查见 [GitHub Pages 发布说明](DEPLOYMENT.md)。
 
 ## 当前布局与动效
 

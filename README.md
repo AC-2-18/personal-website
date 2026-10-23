@@ -23,6 +23,7 @@ npm run preview
 - `outputs/portfolio/THIRD_PARTY.md`：第三方组件与许可证记录。
 - `outputs/portfolio/ASSETS.md`：素材与内容来源说明。
 - `.github/workflows/pages.yml`：手动触发的 GitHub Pages 工作流，本次上传不自动部署。
+- `outputs/portfolio/DEPLOYMENT.md`：GitHub Pages 免费上线步骤、base 路径规则与本地验证方式。
 
 原始素材、简历、过程记录、备份、本地依赖和构建缓存不纳入仓库。`public/profile.sealed.json` 为既有的加密资料文件，仓库不包含其明文或访问密码。
 

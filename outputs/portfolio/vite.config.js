@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite';
 
+// configure-pages supplies the actual path, including root sites/custom domains.
+// Local development defaults to /. Normalize the surrounding slashes once.
+const pagesBasePath = (process.env.PAGES_BASE_PATH || '').replace(/^\/+|\/+$/g, '');
+
 export default defineConfig({
-  base: './',
+  base: pagesBasePath ? `/${pagesBasePath}/` : '/',
   build: {
+    outDir: 'dist',
     target: 'es2022',
     rolldownOptions: {
       onwarn(warning, warn) {
